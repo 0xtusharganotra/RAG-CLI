@@ -1,0 +1,26 @@
+{
+  "name": "rag-cli",
+  "version": "1.0.0",
+  "description": "<!-- Beginning -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xtusharganotra/RAG-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/0xtusharganotra/RAG-CLI/issues"
+  },
+  "homepage": "https://github.com/0xtusharganotra/RAG-CLI#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "groq-sdk": "^0.37.0"
+  }
+}
