@@ -56,12 +56,13 @@ async function main() {
   }
 
   if (steps === maxsteps) {
-    console.log("Max tool usage limit reached");
+    console.log(" \n Max tool usage limit reached \n");
     return;
   }
 
   console.log(" \n Gnerating output... \n");
   console.log(llmres.choices[0].message.content);
+  console.log("\n");
   return;
 }
 
