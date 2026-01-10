@@ -32,22 +32,44 @@ This is a learning project I am currently building. So it's not ready yet, but f
 
 ## Usage
 
-To use the tool, run the following command in your terminal, replacing `"Your question"` with the question you want to ask:
+Run the following command in your terminal to start the interactive chat interface:
 
 ```bash
-npm run dev "Your question"
+npm run dev
 ```
 
-### Example
+The tool will start an interactive chat session where you can:
 
-```bash
-npm run dev "When was the iPhone 12 launched? I want to know the exact date."
+- Type your questions and get real-time answers
+- The AI will automatically perform web searches when needed for current information
+- Type `exit` to quit the application
+
+### Example Session
+
+```
+=============================================================================================
+  ██████╗  █████╗  ██████╗      ██████╗ ██╗      ██████████╗
+  ██╔══██╗██╔══██╗██╔════╝     ██╔════╝ ██║          ██║═══╝
+  ██████╔╝███████║██║  ███╗    ██║      ██║          ██║
+  ██╔══██╗██╔══██║██║   ██║    ██║      ██║          ██║
+  ██║  ██║██║  ██║╚██████╔╝    ╚██████╗ ███████╗ ██████████╗
+  ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝      ╚═════╝ ╚══════╝ ╚═════════╝
+
+RAG-CLI — Personal AI Assistant with Real-Time Search
+Type your question to begin | Type "exit" to quit
+=============================================================================================
+You: When was the iPhone 12 launched? I want to know the exact date.
+
+----Tool call detected, invoking external tool----
+ -----Results from external tool call is retrieved---
+
+Assistant: The iPhone 12 was launched on October 13, 2020...
 ```
 
 ## How it works
 
-This tool takes your question as a command-line argument and uses the Groq API to get a response from the Kimi language model. The model is configured to use a `websearch` tool if it needs real-time or current information to answer your question.
+This tool starts an interactive chat session using the Groq API with the Kimi language model. The model is configured to use a `websearch` tool if it needs real-time or current information to answer your questions.
 
 If the model decides to use the `websearch` tool, the script will call the Tavily API to perform a web search. The search results are then sent back to the model, which uses them to generate a final answer.
 
-The tool can perform up to 5 tool calls in a loop to gather information before providing the final answer. If no tool is needed, the model will answer your question directly.
+The tool can perform up to 5 tool calls per question to gather information before providing the final answer. If no tool is needed, the model will answer your question directly. The conversation continues until you type `exit`.
