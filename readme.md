@@ -72,4 +72,4 @@ This tool starts an interactive chat session using the Groq API with the Kimi la
 
 If the model decides to use the `websearch` tool, the script will call the Tavily API to perform a web search. The search results are then sent back to the model, which uses them to generate a final answer.
 
-The tool can perform up to 5 tool calls per question to gather information before providing the final answer. If no tool is needed, the model will answer your question directly. The conversation continues until you type `exit`
+The tool can perform up to 5 tool calls per question to gather information before providing the final answer. If no tool is needed, the model will answer your question directly. The conversation continues until you type `exit`.
