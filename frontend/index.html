@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rufus Chatbot</title>
+    <style>
+        body {
+            background: #181a20;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #e6e6e6;
+        }
+        .chat-container {
+            background: #23272f;
+            width: 100%;
+            max-width: 420px;
+            margin: 40px 0 0 0;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: #2d31a6;
+            color: #fff;
+            padding: 18px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 18px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 1rem;
+            line-height: 1.5;
+            word-break: break-word;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+        .user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, #4f5bd5 0%, #262a6c 100%);
+            color: #fff;
+            border-bottom-right-radius: 4px;
+        }
+        .bot {
+            align-self: flex-start;
+            background: #23272f;
+            color: #e6e6e6;
+            border-bottom-left-radius: 4px;
+            border: 1px solid #353a45;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 16px;
+            background: #1a1c23;
+            border-top: 1px solid #23272f;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #353a45;
+            background: #23272f;
+            color: #e6e6e6;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .chat-input::placeholder {
+            color: #888b97;
+        }
+        .send-btn {
+            margin-left: 10px;
+            background: linear-gradient(135deg, #4f5bd5 0%, #262a6c 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0 22px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .send-btn:hover {
+            background: #2d31a6;
+        }
+        @media (max-width: 500px) {
+            .chat-container {
+                max-width: 100vw;
+                height: 100vh;
+                margin: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Tushar's Personal Assistant</div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+        </div>
+        <form class="chat-input-area" id="chat-form" autocomplete="off">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..." required />
+            <button type="submit" class="send-btn">Send</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
